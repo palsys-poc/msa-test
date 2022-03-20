@@ -13,6 +13,9 @@ public class Product {
     private String name;
     private String content;
 
+    public Product() {
+    }
+
     public Product(String name, String content) {
         this.name = name;
         this.content = content;
