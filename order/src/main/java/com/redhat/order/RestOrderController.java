@@ -17,4 +17,15 @@ public class RestOrderController {
         return "World peace! - - " + p.getName();
     }
 
+    @RequestMapping(value = "/quote", method = RequestMethod.GET)
+    public String quote(@RequestParam("uid") long uid,
+            @RequestParam("pid") long pid) {
+        String url = "http://msa-test-git:8080/customers/" + uid;
+        RestTemplate rt = new RestTemplate();
+        Person p = rt.getForObject(url, Person.class);
+
+        url = "http://product:8080/customers/" + pid;
+        Product pt = rt.getForObject(url, Product.class);
+        return "User name:" + p.getName() + " --- Product Description: " + pt.getContent();
+    }
 }
