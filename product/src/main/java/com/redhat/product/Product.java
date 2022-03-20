@@ -11,18 +11,18 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private String desc;
+    private String content;
 
-    public Product(String name, String desc) {
+    public Product(String name, String content) {
         this.name = name;
-        this.desc = desc;
+        this.content = content;
     }
 
     @Override
     public String toString() {
         return String.format(
-                "Customer[id=%d, name='%s', desc='%s']",
-                id, name, desc);
+                "Customer[id=%d, name='%s', content='%s']",
+                id, name, content);
     }
 
     public Long getId() {
@@ -33,7 +33,7 @@ public class Product {
         return name;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getContent() {
+        return content;
     }
 }
