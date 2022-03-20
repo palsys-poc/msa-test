@@ -24,7 +24,7 @@ public class RestOrderController {
         RestTemplate rt = new RestTemplate();
         Person p = rt.getForObject(url, Person.class);
 
-        url = "http://product:8080/customers/" + pid;
+        url = "http://product:8080/products/" + pid;
         Product pt = rt.getForObject(url, Product.class);
         return "User name:" + p.getName() + " --- Product Description: " + pt.getContent();
     }
