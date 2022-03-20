@@ -13,7 +13,7 @@ public class Product {
     private String name;
     private String desc;
 
-    public Customer(String name, String desc) {
+    public Product(String name, String desc) {
         this.name = name;
         this.desc = desc;
     }
