@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
-public class RestController {
+public class RestOrderController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(@RequestParam("id") long id) {
