@@ -6,17 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Order {
+public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Long uid; // user id (Person.class)
     private Long pid; // product id (Product.class)
 
-    protected Order() {
+    protected Cart() {
     }
 
-    public Order(Long uid, Long pid) {
+    public Cart(Long uid, Long pid) {
         this.uid = uid;
         this.pid = pid;
     }
