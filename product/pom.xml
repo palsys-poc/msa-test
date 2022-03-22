@@ -37,21 +37,21 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- 
 		<dependency>
 			<groupId>io.opentracing.contrib</groupId>
 			<artifactId>opentracing-spring-web-starter</artifactId>
 			<version>3.0.1</version>
 		</dependency>
+		-->
 
-		<!-- 
 		<dependency>
 			<groupId>io.opentracing.contrib</groupId>
 			<artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
 			<groupId>io.opentracing.contrib</groupId>
 			<artifactId>opentracing-spring-web-starter</artifactId>
-			<version>3.2.2</version>	 
+			<version>3.2.2</version>
 		</dependency>
-		-->
 	</dependencies>
 
 	<build>
