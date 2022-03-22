@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class RestOrderController {
     private RestTemplate restTemplate;
 
-    public Controller(RestTemplate restTemplate) {
+    public RestOrderController(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
