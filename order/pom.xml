@@ -44,6 +44,7 @@
 		<dependency>
 			<groupId>io.opentracing.contrib</groupId>
 			<artifactId>opentracing-spring-web-starter</artifactId>
+			<version>4.1.0</version>
 		</dependency>
 		<!-- 
 		<dependency>
