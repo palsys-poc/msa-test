@@ -1,7 +1,7 @@
 # 
 
 ### Architecture
-
+![alt text](http://url/to/img.png)
 
 Using the artifact "opentracing-spring-jaeger-cloud-starter"
 ```
