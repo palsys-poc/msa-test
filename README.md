@@ -1,7 +1,7 @@
 # 
 
 ### Architecture
-![Add architecture](https://github.com/dyangcht/msa-test/blob/main/Screen%20Shot%202022-03-22%20at%206.27.02%20PM.png)
+![Add architecture](https://github.com/dyangcht/msa-test/blob/main/architecture.png)
 
 Using the artifact "opentracing-spring-jaeger-cloud-starter"
 ```
