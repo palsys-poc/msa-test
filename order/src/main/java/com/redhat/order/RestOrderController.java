@@ -2,6 +2,7 @@ package com.redhat.order;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,7 +19,7 @@ public class RestOrderController {
     }
 
     @RequestMapping(value = "/quote", method = RequestMethod.GET)
-    public String quote(@RequestParam("uid") long uid,
+    public ResponseEntity quote(@RequestParam("uid") long uid,
             @RequestParam("pid") long pid) {
         String url = "http://msa-test-git:8080/customers/" + uid;
         RestTemplate rt = new RestTemplate();
@@ -26,6 +27,6 @@ public class RestOrderController {
 
         url = "http://product:8080/products/" + pid;
         Product pt = rt.getForObject(url, Product.class);
-        return "User name:" + p.getName() + " --- Product Description: " + pt.getContent();
+        return ResponseEntity.ok("User name:" + p.getName() + " --- Product Description: " + pt.getContent());
     }
 }
