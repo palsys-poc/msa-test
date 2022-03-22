@@ -47,6 +47,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>io.opentracing.contrib</groupId>
+			<artifactId>opentracing-spring-web-starter</artifactId>
+			<!-- <version>3.0.1</version> -->
+		</dependency>
 	</dependencies>
 
 	<build>
