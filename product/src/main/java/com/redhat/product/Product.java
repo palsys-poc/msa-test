@@ -33,10 +33,10 @@ public class Product {
     }
 
     public String getName() {
-        return name;
+        return "Name: " + name;
     }
 
     public String getContent() {
-        return content;
+        return "Content: " + content;
     }
 }
