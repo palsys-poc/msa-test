@@ -4,22 +4,19 @@ metadata:
   name: product
   labels:
     app: product
-    app.kubernetes.io/part-of: msa-test-git-app
 spec:
   ports:
-    - name: 8080-tcp
+    - name: http-8080
       protocol: TCP
       port: 8080
       targetPort: 8080
-    - name: 8443-tcp
+    - name: http-8443
       protocol: TCP
       port: 8443
       targetPort: 8443
-    - name: 8778-tcp
+    - name: http-8778
       protocol: TCP
       port: 8778
       targetPort: 8778
   selector:
     app: product
-    app.kubernetes.io/part-of: msa-test-git-app
-  type: ClusterIP
