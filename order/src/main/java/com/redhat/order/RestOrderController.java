@@ -25,10 +25,10 @@ public class RestOrderController {
     @RequestMapping(value = "/quote", method = RequestMethod.GET)
     public ResponseEntity quote(@RequestParam("uid") long uid,
             @RequestParam("pid") long pid) {
-        String url = "http://msa-test-git.nanshan.svc.cluster.local:8080/customers/" + uid;
+        String url = "http://msa-test-git:8080/customers/" + uid;
         Person p = restTemplate.getForObject(url, Person.class);
 
-        url = "http://product.nanshan.svc.cluster.local:8080/products/" + pid;
+        url = "http://product:8080/products/" + pid;
         Product pt = restTemplate.getForObject(url, Product.class);
         return ResponseEntity.ok("User name:" + p.getName() + " --- Product Description: " + pt.getContent());
     }
