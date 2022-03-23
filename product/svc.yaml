@@ -5,7 +5,6 @@ metadata:
   labels:
     app: product
     app.kubernetes.io/part-of: msa-test-git-app
-    version: v1
 spec:
   ports:
     - name: 8080-tcp
