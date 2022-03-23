@@ -17,14 +17,14 @@ spec:
         host: order
         port:
           number: 8080
-  # - match:
-    # - uri:
-        # prefix: /products
-    # route:
-    # - destination:
-        # host: product
-        # port:
-          # number: 8080
+  - match:
+    - uri:
+        prefix: /products
+    route:
+    - destination:
+        host: product
+        port:
+          number: 8080
   - match:
     - uri:
         prefix: /customers
