@@ -33,22 +33,22 @@ spec:
         host: order
         port:
           number: 8080
-  - match:
-    - uri:
-        prefix: /products
-    route:
-    - destination:
-        host: product
-        port:
-          number: 8080
-  - match:
-    - uri:
-        prefix: /customers
-    route:
-    - destination:
-        host: msa-test-git
-        port:
-          number: 8080
+  # - match:
+    # - uri:
+        # prefix: /products
+    # route:
+    # - destination:
+        # host: product
+        # port:
+          # number: 8080
+  # - match:
+    # - uri:
+        # prefix: /customers
+    # route:
+    # - destination:
+        # host: msa-test-git
+        # port:
+          # number: 8080
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
