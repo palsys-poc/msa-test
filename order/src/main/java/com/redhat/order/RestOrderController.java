@@ -30,6 +30,7 @@ public class RestOrderController {
 
         url = "http://product:8080/products/" + pid;
         Product pt = restTemplate.getForObject(url, Product.class);
-        return ResponseEntity.ok("User name:" + p.getName() + " --- Product Description: " + pt.getContent() + "\n");
+        return ResponseEntity.ok("要保人姓名: " + p.getName() + "\n" +
+                "商品特色: " + pt.getContent() + "\n");
     }
 }
