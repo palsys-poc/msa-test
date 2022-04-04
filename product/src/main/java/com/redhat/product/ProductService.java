@@ -9,7 +9,7 @@ public class ProductService implements IProductService {
     private ProductRepository productRepository;
 
     @Override
-    public Optional<Product> findById(long id) {
+    public Optional<Product> findById(Long id) {
         Optional<Product> product = productRepository.findById(id);
         Product prod = new Product();
         product.ifPresent(st -> prod.setId(st.getId()));
