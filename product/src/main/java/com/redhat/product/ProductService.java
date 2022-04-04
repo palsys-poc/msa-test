@@ -14,8 +14,8 @@ public class ProductService implements IProductService {
         Product prod = new Product();
         product.ifPresent(st -> prod.setId(st.getId()));
         // prod.setId(product.getId());
-        product.ifPresent(st -> prod.setName("\n" + st.getName()));
-        product.ifPresent(st -> prod.setContent("\n" + st.getContent()));
+        product.ifPresent(st -> prod.setName("\n..." + st.getName() + "...\n"));
+        product.ifPresent(st -> prod.setContent("\n..." + st.getContent() + "...\n"));
         return Optional.ofNullable(prod);
     }
 }
