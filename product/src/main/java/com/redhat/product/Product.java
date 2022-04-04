@@ -24,7 +24,7 @@ public class Product {
     @Override
     public String toString() {
         return String.format(
-                "Customer[id=%d, name='%s', content='%s']",
+                "Product[id=%d, name='%s', content='%s']",
                 id, name, content);
     }
 
@@ -33,10 +33,10 @@ public class Product {
     }
 
     public String getName() {
-        return "Name: " + name;
+        return name;
     }
 
     public String getContent() {
-        return "Content: " + content;
+        return content;
     }
 }
