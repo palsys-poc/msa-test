@@ -42,7 +42,7 @@ public class Product {
     }
 
     public String getContent() {
-        return content;
+        return "\n=> " + content;
     }
 
     public void setName(String name) {
@@ -50,6 +50,6 @@ public class Product {
     }
 
     public void setContent(String content) {
-        this.content = "\n=> " + content;
+        this.content = content;
     }
 }
