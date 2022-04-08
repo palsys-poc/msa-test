@@ -1,9 +1,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: product
+  name: msa-test-git
   labels:
-    app: product
+    app: msa-test-git
     version: v1
     # test: v1
 spec:
