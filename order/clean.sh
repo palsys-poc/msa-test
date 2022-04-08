@@ -5,3 +5,4 @@ oc delete route order
 oc delete bc order
 oc delete secret order-generic-webhook-secret
 oc delete secret order-github-webhook-secret
+echo 'status ok'
