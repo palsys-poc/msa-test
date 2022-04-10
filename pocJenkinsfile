@@ -62,7 +62,7 @@ pipeline {
             steps {
                dir("/mprod/msa-test/product") {
                sh '''
-			       wget https://github.com/palsys-poc/msa-test-prod/blob/v2/svc.yaml
+			       curl https://raw.githubusercontent.com/cheyang0323/msa-test-prod/v2/svc.yaml > svc.yaml
                    oc delete svc product
                    oc apply -f ./svc.yaml
                 '''
