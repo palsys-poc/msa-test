@@ -62,6 +62,7 @@ pipeline {
             steps {
                dir("/mprod/msa-test/product") {
                sh '''
+			       wget https://github.com/palsys-poc/msa-test-prod/blob/v2/svc.yaml
                    oc delete svc product
                    oc apply -f ./svc.yaml
                 '''
@@ -78,6 +79,46 @@ pipeline {
                 '''
                 }
             }
+			
+        stage('check image already build') { 
+            steps {
+               sh '''
+                   echo check image status
+				   oc get is
+				   sleep 7m
+				   echo all done.
+                '''
+                }
+            }
+			
+        stage('check image already build') { 
+            steps {
+               sh '''
+                   echo check image status
+				   oc get is
+				   sleep 7m
+				   echo all done.
+                '''
+                }
+            }
+			
+        stage('push image to quay') { 
+            steps {
+               sh 'docker login -u root -p $(oc whoami -t) default-route-openshift-image-registry.apps.ocp49.redhat.poc'
+			   sh 'docker pull default-route-openshift-image-registry.apps.ocp49.redhat.poc/nanshan/msa-test-git'
+			   sh 'docker pull default-route-openshift-image-registry.apps.ocp49.redhat.poc/nanshan/order'
+			   sh 'docker pull default-route-openshift-image-registry.apps.ocp49.redhat.poc/nanshan/product'
+			   sh 'docker tag default-route-openshift-image-registry.apps.ocp49.redhat.poc/nanshan/msa-test-git quay.ocp49.redhat.poc/root/msa-test-git'
+			   sh 'docker tag default-route-openshift-image-registry.apps.ocp49.redhat.poc/nanshan/order quay.ocp49.redhat.poc/root/order'
+			   sh 'docker tag default-route-openshift-image-registry.apps.ocp49.redhat.poc/nanshan/product quay.ocp49.redhat.poc/root/product'
+			   sh 'docker push quay.ocp49.redhat.poc/root/msa-test-git'
+			   sh 'docker push quay.ocp49.redhat.poc/root/order'
+			   sh 'docker push quay.ocp49.redhat.poc/root/product'
+			   sh 'echo all done'
+                }
+            }			
+			
+			
 			
       }
     }
