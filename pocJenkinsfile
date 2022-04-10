@@ -91,17 +91,6 @@ pipeline {
                 }
             }
 			
-        stage('check image already build') { 
-            steps {
-               sh '''
-                   echo check image status
-				   oc get is
-				   sleep 7m
-				   echo all done.
-                '''
-                }
-            }
-			
         stage('push image to quay') { 
             steps {
                sh 'docker login -u root -p $(oc whoami -t) default-route-openshift-image-registry.apps.ocp49.redhat.poc'
