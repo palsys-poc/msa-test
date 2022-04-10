@@ -6,4 +6,3 @@ oc delete bc msa-test-git
 oc delete secret msa-test-git-generic-webhook-secret
 oc delete secret msa-test-git-github-webhook-secret
 echo 'status ok'
-
