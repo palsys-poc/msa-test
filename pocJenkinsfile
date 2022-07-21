@@ -89,7 +89,7 @@ pipeline {
                sh '''
                    echo check image status
 				   oc get is
-				   sleep 7m
+				   sleep 10m
 				   echo all done.
                 '''
                 }
